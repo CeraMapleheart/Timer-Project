@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quicktimer">
+    package="com.example.quicktimer1">
 
-    <!-- Permissions -->
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Required Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <!-- The minimum SDK version your app will support -->
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
+
+    <!-- Main Application -->
     <application
         android:allowBackup="true"
-        android:icon="@drawable/amrita_logo"
-        android:label="QuickTimer"
-        android:roundIcon="@drawable/amrita_logo"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:icon="@mipmap/ic_launcher"
+        android:label="Quicktimer"
+        android:theme="@style/Theme.Quicktimer1">
 
-        <!-- Splash Screen Activity -->
+        <!-- Splash Screen -->
         <activity
-            android:name=".SplashActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="Quicktimer"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Timer Screen Activity -->
-        <activity android:name=".TimerActivity" />
+        <!-- Timer Activity (Home screen) -->
+        <activity android:name=".MainActivity" android:label="Home Timer" />
 
         <!-- Sound Settings Activity -->
-        <activity android:name=".SoundSettingsActivity" />
+        <activity android:name=".SoundSettingsActivity"
+            android:label="Sound Settings" />
 
         <!-- Timer History Activity -->
-        <activity android:name=".TimerHistoryActivity" />
+        <activity android:name=".TimerHistoryActivity"
+            android:label="Timer History" />
 
     </application>
+
 </manifest>

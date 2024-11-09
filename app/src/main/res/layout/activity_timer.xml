@@ -3,56 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp">
+    android:gravity="center">
 
+    <!-- Timer Display -->
     <TextView
         android:id="@+id/timerDisplay"
+        android:text="00:00:00"
+        android:textSize="50sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00:00:00"
-        android:textSize="48sp" />
+        android:gravity="center"
+        android:textColor="#000000"/>
 
+    <!-- Timer Input Fields -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
+        android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/inputHours"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/hoursInput"
+            android:hint="HH"
             android:inputType="number"
-            android:hint="HH" />
-
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
         <EditText
-            android:id="@+id/inputMinutes"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/minutesInput"
+            android:hint="MM"
             android:inputType="number"
-            android:hint="MM" />
-
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
         <EditText
-            android:id="@+id/inputSeconds"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/secondsInput"
+            android:hint="SS"
             android:inputType="number"
-            android:hint="SS" />
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <Button android:id="@+id/startButton"
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"/>
-
-    <Button android:id="@+id/pauseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pause"/>
-
-    <Button android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"/>
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/startButton"
+            android:text="Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/pauseButton"
+            android:text="Pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/resetButton"
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 </LinearLayout>
