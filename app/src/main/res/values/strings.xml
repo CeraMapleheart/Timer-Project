@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QuickTimer</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="timer_ended">Time's up!</string>
+    <!-- Add other strings as needed -->
 </resources>
